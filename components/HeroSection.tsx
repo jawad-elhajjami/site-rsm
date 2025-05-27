@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-[500px] h-[700px] bg-radial from-blue-500 via-blue-600 to-blue-700"
+      className="min-h-[500px] h-[700px] bg-radial from-blue-700 via-blue-600 to-blue-500"
     >
       <div className="container max-w-5xl mx-auto h-full flex flex-col items-center justify-center lg:p-20 p-10">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-slate-50 lg:text-7xl md:text-5xl text-4xl">
