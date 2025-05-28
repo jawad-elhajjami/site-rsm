@@ -22,23 +22,23 @@ interface NavbarProps {
 const navItems = [
   {
     label: "À propos",
-    href: "/about",
+    href: "/#about",
     icon: <IconInfoCircle className="h-5 w-5" />,
   },
   {
     label: "Équipe pédagogique",
-    href: "/professors",
+    href: "/#professors",
     icon: <IconUsersGroup className="h-5 w-5" />,
   },
 
   {
-    label: "Programmes",
-    href: "/programs",
+    label: "Programme",
+    href: "/#program",
     icon: <IconBooks className="h-5 w-5" />,
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "/#contact",
     icon: <IconMail className="h-5 w-5" />,
   },
 ];
@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
           </div>
         )}
 
-      <Button className="rounded-full bg-blue-600 lg:block hidden">
+      <Button className="rounded-full bg-slate-950 lg:block hidden">
         <Link href="/apply" className="text-sm font-semibold">
           Postuler
         </Link>

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="bg-slate-950">
+    <section id="contact" className="bg-slate-950">
       <div className="container max-w-7xl py-20 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-20 px-4 sm:px-8">
         <div className="col-span-1">
           <h4 className="text-3xl lg:text-5xl lg:leading-tight tracking-tight font-medium text-white mb-4">
@@ -82,7 +82,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

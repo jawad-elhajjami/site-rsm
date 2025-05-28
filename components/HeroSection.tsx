@@ -7,8 +7,10 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-[500px] h-[700px] bg-radial from-blue-700 via-blue-600 to-blue-500"
+      className="min-h-[500px] h-[700px] bg-cover lg:bg-center bg-right bg-no-repeat relative" 
+      style={{ backgroundImage: 'url("/images/conference.jpg")' }}
     >
+      <div className="w-full h-full absolute top-0 bg-radial from-slate-700 via-slate-900 to-slate-950 opacity-65"></div>
       <div className="container max-w-5xl mx-auto h-full flex flex-col items-center justify-center lg:p-20 p-10">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-slate-50 lg:text-7xl md:text-5xl text-4xl">
           {"Construisons les réseaux de demain"
@@ -57,7 +59,7 @@ const HeroSection = () => {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+          <button className="w-60 transform rounded-lg bg-blue-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 dark:bg-white dark:text-black dark:hover:bg-gray-200">
             Postuler
           </button>
           <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
