@@ -3,7 +3,16 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { Button } from "./ui/button";
 const HeroSection = () => {
+
+  const ScrollToSection = () => {
+    const section = document.getElementById("about");
+    if(section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section
       id="hero"
@@ -59,10 +68,10 @@ const HeroSection = () => {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform rounded-lg bg-blue-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 dark:bg-white dark:text-black dark:hover:bg-gray-200">
-            Postuler
-          </button>
-          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+          <Button className="w-60 transform rounded-lg bg-blue-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 dark:bg-white dark:text-black dark:hover:bg-gray-200" asChild>
+            <Link href={"/apply"}>Postuler</Link>
+          </Button>
+          <button onClick={ScrollToSection} className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
             Découvrez plus
           </button>
         </motion.div>

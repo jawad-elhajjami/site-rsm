@@ -1,11 +1,9 @@
+'use client'
 import React from "react";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { Textarea } from "./ui/textarea";
 import { IconBrandFacebook } from "@tabler/icons-react";
-import { IconBrandInstagram } from "@tabler/icons-react";
+import { IconPhone } from "@tabler/icons-react";
 import { IconGlobe } from "@tabler/icons-react";
+import ContactForm from "./ContactForm";
 import Link from "next/link";
 
 const Contact = () => {
@@ -24,64 +22,23 @@ const Contact = () => {
           <div>
             <div className="flex items-center mt-4">
               <IconGlobe className="text-blue-500 mr-2" />
-              <Link href={""} className="text-slate-50 hover:text-blue-600 duration-200">www.fs.uit.ac.ma</Link>
+              <Link href={"https://fs.uit.ac.ma/"} target="_blank" className="text-slate-50 hover:text-blue-600 duration-200">fs.uit.ac.ma</Link>
             </div>
             <div className="flex items-center mt-2">
               <IconBrandFacebook className="text-blue-500 mr-2" />
-              <Link href={""} className="text-slate-50 hover:text-blue-600 duration-200">facebook.com/masterreseaux</Link>
+              <Link href={"https://www.facebook.com/FSKenitra"} target="_blank" className="text-slate-50 hover:text-blue-600 duration-200">www.facebook.com/FSKenitra</Link>
             </div>
             <div className="flex items-center mt-2">
-              <IconBrandInstagram className="text-pink-500 mr-2" />
-              <Link href={""} className="text-slate-50 hover:text-blue-600 duration-200">instagram.com/masterreseaux</Link>
+              <IconPhone className="text-pink-500 mr-2" />
+              <Link href={"tel:+212537329400"} className="text-slate-50 hover:text-blue-600 duration-200">(+212) 5 37 32 94 00</Link>
             </div>
           </div>
         </div>
         <div className="col-span-1">
-          <form action="">
-            <div className="mb-4">
-              <Label htmlFor="name" className="text-white mb-4">
-                Nom
-              </Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Votre nom"
-                className="text-slate-50 border border-slate-700 bg-slate-900 outline-0"
-              />
-            </div>
-            <div className="mb-4">
-              <Label htmlFor="name" className="text-white mb-4">
-                Email
-              </Label>
-              <Input
-                id="name"
-                type="email"
-                placeholder="Votre e-mail"
-                className="text-slate-50 border border-slate-700 bg-slate-900 outline-0"
-              />
-            </div>
-            <div className="mb-4">
-              <Label htmlFor="name" className="text-white mb-4">
-                Sujet
-              </Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Sujet de message"
-                className="text-slate-50 border border-slate-700 bg-slate-900 outline-0"
-              />
-            </div>
-            <div className="mb-4">
-              <Label htmlFor="message" className="text-white mb-4">
-                Message
-              </Label>
-              <Textarea placeholder="Tapez votre message ici." className="text-slate-50 border border-slate-700 bg-slate-900 outline-0" />
-            </div>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full">
-              Envoyer</Button>
-          </form>
+          <ContactForm />
         </div>
       </div>
+   
     </section>
   );
 };
